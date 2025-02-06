@@ -175,4 +175,4 @@ A partir de estas unidades básicas, se definen múltiplos para representar cant
 
 # Cuadro conceptual: 
 
-![Cuadro conceptual](image.png)
+![Descripción de la imagen](imagenes/Cuadro.png)
