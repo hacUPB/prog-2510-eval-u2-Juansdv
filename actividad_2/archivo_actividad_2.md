@@ -88,4 +88,26 @@ George Boole creó un sistema matemático, el álgebra booleana, que nos permite
 |nulo| una variable no tiene asignado ningún dato.| Null| Null| None
 
 
+# Ejercicio 5
 
+Imagina que necesitas almacenar la siguiente información en un programa:
+
+- Un identificador numérico (número entero)
+- Una temperatura (valor de punto flotante)
+- Un valor lógico (dato booleano)
+- Un texto con 10 caracteres.
+
+Se almacena la información cada 10 segundos durante 24 horas. Calcula cuánto espacio total se requiere en memoria para almacenar estos datos. Describe el procedimiento y muestra el resultado final.
+
+## Solución:
+
+un dato numerico entero: 4 bits
+un dato numerico flotante: 4 bits
+dato booleano: 1 bit
+dato tipo string: 1 bit por carácter. --> 10 bits los 10 caracteres
+
+En total: 19 bits cada 10 segundos.
+
+* 6 datos*60m= 360 datos por hora
+* 360*24h = 8640 datos por dia 
+* 8640*19 para hallar cuantos bits= 164160 bits por día
