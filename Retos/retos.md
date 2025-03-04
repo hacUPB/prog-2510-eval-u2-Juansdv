@@ -88,35 +88,28 @@ Mostar h
 
 ```
 Inicio
-    Escribir "Ingrese el día de nacimiento:"
     Leer diaNac
-    Escribir "Ingrese el mes de nacimiento:"
     Leer mesNac
-    Escribir "Ingrese el año de nacimiento:"
-    Leer anioNac
+    Leer añoNac
 
-    Escribir "Ingrese el día actual:"
     Leer diaAct
-    Escribir "Ingrese el mes actual:"
     Leer mesAct
-    Escribir "Ingrese el año actual:"
     Leer anioAct
 
-    edad ← anioAct - anioNac
+    edad = añoAct - añoNac
 
     Si (mesAct < mesNac) o (mesAct = mesNac y diaAct < diaNac) Entonces
-        edad ← edad - 1
-        cumplio ← "No ha cumplido años aún."
+        edad = edad - 1
     Sino
-        cumplio ← "Ya cumplió años este año."
+        edad = edad + 1
     FinSi
 
     Si (diaAct = diaNac) y (mesAct = mesNac) Entonces
         Escribir "Feliz Cumpleaños!"
+    Sino
+        Mostar edad
     FinSi
 
-    Escribir "La edad actual de la persona es: ", edad
-    Escribir cumplio
 Fin
 ```
 
@@ -128,29 +121,29 @@ Fin
 ```
     Inicio
 
-    Leer horasTrabajadas
-    Leer pagoPorHora
+    Leer horas_trabajadas
+    Leer pago_hora
 
-    Si horasTrabajadas > 50 Entonces
+    Si horas_trabajadas > 50 Entonces
         Escribir "No se permite trabajar más de 50 horas."
     SiNo
-        Si horasTrabajadas <= 40 Entonces
-            sueldoSemanal = horasTrabajadas * pagoPorHora
+        Si horas_trabajadas <= 40 Entonces
+            sueldo_semanal = horas_trabajadas * pago_hora
         SiNo
-            horasNormales = 40
-            Si horasTrabajadas <= 45 Entonces
-                horasExtrasDobles = horasTrabajadas - 40
-                sueldoSemanal = (horasNormales * pagoPorHora) + (horasExtrasDobles * pagoPorHora * 2)
+            horas_normales = 40
+            Si horas_trabajadas <= 45 Entonces
+                horas_dobles = horas_trabajadas - 40
+                sueldo_semanal = (horas_normales * pago_hora) + (horas_dobles * pago_hora * 2)
             SiNo
-                Si horasTrabajadas <= 50 Entonces
-                    horasExtrasDobles = 5
-                    horasExtrasTriples = horasTrabajadas - 45
-                    sueldoSemanal = (horasNormales * pagoPorHora) + (horasExtrasDobles * pagoPorHora * 2) + (horasExtrasTriples * pagoPorHora * 3)
+                Si horas_trabajadas <= 50 Entonces
+                    horas_dobles = 5
+                    horas_triples = horas_trabajadas - 40
+                    sueldo_semanal = (horas_normales * pago_hora) + horas_dobles + (horas_triples * pago_hora * 3)
                 FinSi
             FinSi
         FinSi
 
-        Escribir "El sueldo semanal es: ", sueldoSemanal
+        Escribir "El sueldo semanal es: ", sueldo_semanal
     FinSi
 
     Fin
@@ -165,8 +158,8 @@ Fin
     Leer N
 
     ceros = 0
-    menoresCero = 0
-    mayoresCero = 0
+    menores_cero = 0
+    mayores_cero = 0
 
     Para i = 1 Hasta N Hacer
         Escribir "Ingrese el número ", i, ": "
@@ -184,8 +177,8 @@ Fin
     FinPara
 
     Escribir "Cantidad de ceros: ", ceros
-    Escribir "Cantidad de números menores a cero: ", menoresCero
-    Escribir "Cantidad de números mayores a cero: ", mayoresCero
+    Escribir "Cantidad de números menores a cero: ", menores_cero
+    Escribir "Cantidad de números mayores a cero: ", mayores_cero
 
     Fin
 ```
@@ -195,14 +188,14 @@ Fin
 ```
     Inicio
 
-    ahorroAnual = 0
+    ahorro_anual = 0
 
     Para dia = 1 Hasta 365 Hacer
-        ahorroDiario = 3 * (3 ^ (dia - 1)) / 100  // Cálculo del ahorro diario en pesos
-        ahorroAnual = ahorroAnual + ahorroDiario
+        ahorro_diario = 3 * (3 ^ (dia - 1)) / 100  
+        ahorro_anual = ahorro_diario
     FinPara
 
-    Escribir "Ahorro total en un año: $", ahorroAnual
+    Escribir "Ahorro total en un año: $", ahorro_anual
 
     Fin
 
@@ -213,6 +206,7 @@ Fin
 
 
 ```
+
     Inicio
 
     Escribir "Ingrese la cantidad de artículos (N): "
