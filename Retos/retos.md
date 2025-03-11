@@ -196,7 +196,7 @@ Fin
 
 ## analisis:
 
-* Variable de entrada: ceros, menores_cero, mayores_cero
+* Variable de entrada: N
 * Variable de salida = ceros, menores_ceros, mayores_cero
 * Constante: No hay constante
 * Ecuación: ceros + 1 ///// menores + 1 ///// mayores + 1
